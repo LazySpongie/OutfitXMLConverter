@@ -16,4 +16,8 @@ Make sure python is added to PATH in the installer.
 
 - [Install lxml for Python](https://lxml.de/installation.html)
 
-- Run one of the bat files and paste the file path of your mods media folder. This can also be used on the vanilla media folder.
+- Run Convert_To_Readable.bat and paste the file path of your mods media folder.
+
+- Edit the outfits in clothing_readable.xml
+  
+- Run Convert_To_ClothingXML.bat and paste the file path of your mods media folder to save your changes back into clothing.xml to test your outfits in-game
