@@ -1,12 +1,14 @@
 # Project Zomboid Outfit XML Converter
-A python script for clothing modders that can convert clothing.xml into a readable format so that changes can be made more easily and then converted back.
-
-The script reads the guids and item names from fileGuidTable.xml and will also tell you if any items in the outfit xml are missing from fileGuidTable.
+A python script for clothing modders that makes editing zombie outfits easier.
 
 ## Features
-- Convert the guids in clothing.xml to item names and save it as clothing_readable.xml.
+- Convert_To_Readable.bat saves a copy of clothing.xml with item guids replaced by item names as clothing_readable.xml
+  
+- Convert_To_ClothingXML.bat updates clothing.xml with any changes made to clothing_readable.xml
+  
+- The script reads from the fileGuidTable.xml in your mod folder to match the names and guids of each item
 
-- Convert the item names in clothing_readable.xml to guids and save the changes to clothing.xml.
+- The script will also let you know if any items in the outfits file are missing from your mods fileGuidTable.xml
 
 ## Usage
 - [Install Python](https://www.python.org/downloads/).
