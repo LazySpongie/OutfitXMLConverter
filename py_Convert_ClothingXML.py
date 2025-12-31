@@ -33,9 +33,9 @@ def createItemDictionaries(xmlFile):
 
 
 def ConvertClothingXML(path, toReadable):
-    itemDicts = createItemDictionaries(path + "\\fileGuidTable.xml")
+    itemDicts = createItemDictionaries(path + "/fileGuidTable.xml")
 
-    filepath = path + "\\clothing\\"
+    filepath = path + "/clothing/"
     readXML = filepath + "clothing_readable.xml"
     if toReadable:
         readXML = filepath + "clothing.xml"
@@ -71,18 +71,18 @@ def ConvertClothingXML(path, toReadable):
     print("")
     for item in missingelements:
         print("Element missing from fileGuidTable.xml: " + item)
-
+    
     print("")
     print("Created " + writeXML)
 
 def CreateReadableFile():
     print("Create clothing_readable.xml from clothing.xml")
-    path = input("Enter the file path to your mod's media folder:   ")
+    path = input("Enter the file path to your mod's media folder: \n")
     ConvertClothingXML(path, True)
 
 def CreateClothingXML():
     print("Create clothing.xml from clothing_readable.xml")
-    path = input("Enter the file path to your mod's media folder:   ")
+    path = input("Enter the file path to your mod's media folder: \n")
     ConvertClothingXML(path, False)
 
 

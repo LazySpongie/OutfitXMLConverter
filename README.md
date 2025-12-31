@@ -1,12 +1,19 @@
-# Project Zomboid Outfit XML Converter
-A python script for clothing modders that can convert clothing.xml into a readable format so that changes can be made more easily and then converted back.
 
-The script reads the guids and item names from fileGuidTable.xml and will also tell you if any items in the outfit xml are missing from fileGuidTable.
+# Project Zomboid Outfit XML Converter
+A python script for clothing modders that makes editing zombie outfits easier.
 
 ## Features
-- Convert the guids in clothing.xml to item names and save it as clothing_readable.xml.
+- Convert_To_Readable.bat saves a copy of clothing.xml with item guids replaced by item names as clothing_readable.xml
+  
+- Convert_To_ClothingXML.bat updates clothing.xml with any changes made to clothing_readable.xml
 
-- Convert the item names in clothing_readable.xml to guids and save the changes to clothing.xml.
+- Get_Vanilla_Items.bat gets every vanilla item found in clothing_readable.xml and saves them to a new file so they can be pasted into your mod's fileGuidTable.
+  
+
+- The scripts read from the fileGuidTable.xml in your mod folder to match the names and guids of each item
+
+- The script will also let you know if any items are missing from your fileGuidTable.xml
+
 
 ## Usage
 - [Install Python](https://www.python.org/downloads/).
@@ -14,4 +21,11 @@ Make sure python is added to PATH in the installer.
 
 - [Install lxml for Python](https://lxml.de/installation.html)
 
-- Run one of the bat files and paste the file path of your mods media folder. This can also be used on the vanilla media folder.
+- Run Convert_To_Readable.bat and paste the file path of your mods media folder.
+
+- Edit the outfits in clothing_readable.xml
+
+- Run Get_Vanilla_Items.bat so you can add any vanilla items you've used into fileGuidTable.xml. 
+Items used in your outfits that aren't in your mod's fileGuidTable.xml will not appear in-game.
+  
+- Run Convert_To_ClothingXML.bat and paste the file path of your mods media folder to save your changes back into clothing.xml to test your outfits in-game
